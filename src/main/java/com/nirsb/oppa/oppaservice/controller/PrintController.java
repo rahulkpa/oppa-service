@@ -48,7 +48,7 @@ public class PrintController {
     }
 
     @GetMapping("documents/{docId}")
-    public ResponseEntity getDocument(@PathVariable long docId) throws IOException {
+    public ResponseEntity<ByteArrayResource> getDocument(@PathVariable long docId) {
         Optional<com.nirsb.oppa.oppaservice.model.DocumentDTO> documentDTO = documentRepository.findById(docId);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
