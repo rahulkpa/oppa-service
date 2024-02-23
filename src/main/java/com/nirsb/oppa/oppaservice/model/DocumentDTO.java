@@ -1,13 +1,12 @@
 package com.nirsb.oppa.oppaservice.model;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "USERS_DOCUMENT")
 public class DocumentDTO{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="DOC_ID")
-    private long docId;
+    private long id;
     @Column(name="MOB_NO")
     private long mobileNumber;
     @Column(name="NO_OF_COPIES")
@@ -73,11 +72,11 @@ public class DocumentDTO{
         this.file = file;
     }
 
-    public long getDocId() {
-        return docId;
+    public long getId() {
+        return id;
     }
 
-    public void setDocId(long docId) {
-        this.docId = docId;
+    public void setId(long id) {
+        this.id = id;
     }
 }

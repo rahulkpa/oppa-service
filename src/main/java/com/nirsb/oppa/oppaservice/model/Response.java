@@ -1,8 +1,8 @@
 package com.nirsb.oppa.oppaservice.model;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.RepresentationModel;
 
-public class Response extends ResourceSupport {
+public class Response extends RepresentationModel {
     private String message;
 
     public Response(String message) {
